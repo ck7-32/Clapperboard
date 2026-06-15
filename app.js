@@ -3,7 +3,7 @@
   "use strict";
 
   var STORAGE_KEY = "clapperboard.v1";
-  var TEXT_FIELDS = ["production", "director", "camera", "date", "roll"];
+  var TEXT_FIELDS = ["device", "location", "date"];
   var COUNTERS = ["scene", "shot", "take"];
   var ALL_FIELDS = TEXT_FIELDS.concat(COUNTERS);
 
