@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>場記板 Clapperboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="board">
+    <div class="stripes" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <h1 class="title">數位場記板</h1>
+
+    <!-- 製作資訊欄 -->
+    <section class="info-grid">
+      <label class="field field-wide">
+        <span>片名 PRODUCTION</span>
+        <input type="text" id="production" placeholder="輸入片名" />
+      </label>
+      <label class="field">
+        <span>導演 DIRECTOR</span>
+        <input type="text" id="director" placeholder="導演" />
+      </label>
+      <label class="field">
+        <span>攝影 CAMERA</span>
+        <input type="text" id="camera" placeholder="攝影師" />
+      </label>
+      <label class="field">
+        <span>日期 DATE</span>
+        <input type="date" id="date" />
+      </label>
+      <label class="field">
+        <span>捲號 ROLL</span>
+        <input type="text" id="roll" placeholder="A001" />
+      </label>
+    </section>
+
+    <!-- 場 / 鏡 / 次 -->
+    <section class="ssh">
+      <div class="ssh-cell">
+        <span class="ssh-label">場 SCENE</span>
+        <div class="counter">
+          <button type="button" data-target="scene" data-delta="-1" aria-label="場減一">−</button>
+          <input type="text" id="scene" value="1" inputmode="numeric" />
+          <button type="button" data-target="scene" data-delta="1" aria-label="場加一">＋</button>
+        </div>
+      </div>
+      <div class="ssh-cell">
+        <span class="ssh-label">鏡 SHOT</span>
+        <div class="counter">
+          <button type="button" data-target="shot" data-delta="-1" aria-label="鏡減一">−</button>
+          <input type="text" id="shot" value="1" inputmode="numeric" />
+          <button type="button" data-target="shot" data-delta="1" aria-label="鏡加一">＋</button>
+        </div>
+      </div>
+      <div class="ssh-cell">
+        <span class="ssh-label">次 TAKE</span>
+        <div class="counter">
+          <button type="button" data-target="take" data-delta="-1" aria-label="次減一">−</button>
+          <input type="text" id="take" value="1" inputmode="numeric" />
+          <button type="button" data-target="take" data-delta="1" aria-label="次加一">＋</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="saved-hint" id="savedHint">資料自動儲存於本機</div>
+  </main>
+</body>
+<script src="app.js"></script>
+</html>
