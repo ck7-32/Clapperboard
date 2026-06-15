@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>場記板 Clapperboard</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=2" />
 </head>
 <body>
   <main class="board">
@@ -25,9 +25,13 @@
         <span>拍攝場地 LOCATION</span>
         <input type="text" id="location" placeholder="拍攝場地" />
       </label>
-      <label class="field field-wide">
+      <label class="field">
         <span>日期 DATE</span>
         <input type="date" id="date" />
+      </label>
+      <label class="field">
+        <span>影片別 TYPE</span>
+        <input type="text" id="type" placeholder="影片別" />
       </label>
     </section>
 
@@ -61,6 +65,6 @@
 
     <div class="saved-hint" id="savedHint">資料自動儲存於本機</div>
   </main>
+  <script src="app.js?v=2"></script>
 </body>
-<script src="app.js"></script>
 </html>
